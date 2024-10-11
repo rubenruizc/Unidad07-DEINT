@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Ejercicio05.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Ejercicio05"
+    xmlns:views="clr-namespace:Ejercicio05.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Ejercicio05">
+    
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <Tab Title="Camisetas TOP"
+             Icon="paw.png">
+            <ShellContent Title="Camisetas Retro"
+                          Icon="betis.png"
+                          ContentTemplate="{DataTemplate views:Retro}" />
+            <ShellContent Title="Camisetas Internacionales"
+                          Icon="espana.png"
+                          ContentTemplate="{DataTemplate views:Internacional}" />
+        </Tab>
+        <!--
+        Shell has implicit conversion operators that enable the Shell visual hierarchy to be simplified.
+        This is possible because a subclassed Shell object can only ever contain a FlyoutItem object or a TabBar object,
+        which can only ever contain Tab objects, which can only ever contain ShellContent objects.
+
+        The implicit conversion automatically wraps the ShellContent objects below in Tab objects.
+        -->
+        <ShellContent Title="Camisetas Serie A"
+                      Icon="milan.png"
+                      ContentTemplate="{DataTemplate views:SerieA}" />
+        <ShellContent Title="Camisetas Premier League"
+                      Icon="ipswich.png"
+                      ContentTemplate="{DataTemplate views:PremierLeague}" />
+        <ShellContent Title="Camisetas La Liga"
+                      Icon="valladolis.png"
+                      ContentTemplate="{DataTemplate views:LaLiga}" />
+    </FlyoutItem>
+</Shell>
