@@ -57,11 +57,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Images\betis.png" />
-	  <None Remove="Resources\Images\espana.png" />
+	  <None Remove="Resources\Images\balon.png" />
+	  <None Remove="Resources\Images\help.png" />
 	  <None Remove="Resources\Images\ipswich.png" />
-	  <None Remove="Resources\Images\milan.png" />
-	  <None Remove="Resources\Images\valladolis.png" />
+	  <None Remove="Resources\Images\ronaldinho.png" />
+	  <None Remove="Resources\Images\settings.png" />
+	  <None Remove="Resources\Images\top.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -71,6 +72,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\Help.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Internacional.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
@@ -84,6 +88,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\SerieA.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Settings.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

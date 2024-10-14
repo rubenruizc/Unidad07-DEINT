@@ -5,17 +5,29 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:Ejercicio05"
     xmlns:views="clr-namespace:Ejercicio05.Views"
-    Shell.FlyoutBehavior="Disabled"
+    Shell.FlyoutBehavior="Flyout"
     Title="Ejercicio05">
+
+    <Shell.FlyoutHeaderTemplate>
+        <DataTemplate>
+            <Grid BackgroundColor="Black"
+                  HeightRequest="150">
+                <Image Aspect="Fill" Source="ronaldinho.png" Opacity="0.6"></Image>
+                <Label Text="Fútbol Champagne" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" TextColor="White"></Label>
+                
+            </Grid>
+        </DataTemplate>
+        
+    </Shell.FlyoutHeaderTemplate>
     
     <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
         <Tab Title="Camisetas TOP"
-             Icon="paw.png">
+             Icon="top.png">
             <ShellContent Title="Camisetas Retro"
-                          Icon="betis.png"
+                          Icon="dotnet_bot.png"
                           ContentTemplate="{DataTemplate views:Retro}" />
             <ShellContent Title="Camisetas Internacionales"
-                          Icon="espana.png"
+                          Icon="dotnet_bot.png"
                           ContentTemplate="{DataTemplate views:Internacional}" />
         </Tab>
         <!--
@@ -25,14 +37,27 @@
 
         The implicit conversion automatically wraps the ShellContent objects below in Tab objects.
         -->
+        <Tab Title="Camisetas actuales"
+             Icon="balon.png">
+            
         <ShellContent Title="Camisetas Serie A"
-                      Icon="milan.png"
+                      Icon="seriea.png"
                       ContentTemplate="{DataTemplate views:SerieA}" />
         <ShellContent Title="Camisetas Premier League"
                       Icon="ipswich.png"
                       ContentTemplate="{DataTemplate views:PremierLeague}" />
-        <ShellContent Title="Camisetas La Liga"
-                      Icon="valladolis.png"
+            <ShellContent Title="Camisetas La Liga"
+                      Icon="dotnet_bot.png"
                       ContentTemplate="{DataTemplate views:LaLiga}" />
+        </Tab>
+
+        
     </FlyoutItem>
+    
+        <ShellContent Title="Settings"
+              Icon="settings.png"
+              ContentTemplate="{DataTemplate views:Settings}" />
+        <ShellContent Title="Help"
+              Icon="help.png"
+              ContentTemplate="{DataTemplate views:Help}" />
 </Shell>
